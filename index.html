@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>민준 게임 센터</title>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🔵 네비게이션 바 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  position: relative;
+  margin-left: 35px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu .active::after {
+  width: 100%;
+}
+
+/* 제목 */
+h1 {
+  padding: 140px 0 40px 0;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeDown 1s ease forwards;
+}
+
+@keyframes fadeDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 카드 영역 */
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  color: black;
+  width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  transform: translateY(50px);
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 15px 0 5px 0;
+}
+
+.card p {
+  padding: 0 15px;
+  font-size: 14px;
+}
+
+.card button {
+  margin: 15px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #2a5298;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.card button:hover {
+  background: #1e3c72;
+  transform: scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 네비게이션 바 -->
+<div class="navbar">
+  <div class="logo" onclick="location.href='index.html'">
+    MINJUN GAMES
+  </div>
+
+  <div class="menu">
+    <a href="index.html" class="active">홈</a>
+    <a href="about.html">소개</a>
+  </div>
+</div>
+
+<h1>🎮 민준 게임 센터 🎮</h1>
+
+<div class="container">
+
+  <div class="card">
+    <img src="game1.png">
+    <h2>점프 점프</h2>
+    <p>장르: 점프, 장애물 피하기</p>
+    <button onclick="location.href='game1.html'">게임 소개</button>
+  </div>
+
+  <div class="card">
+    <img src="game2.png">
+    <h2>피하기 게임</h2>
+    <p>장르: 장애물 피하기</p>
+    <button onclick="location.href='game2.html'">게임 소개</button>
+  </div>
+
+  <div class="card">
+    <img src="game3.png">
+    <h2>상식 퀴즈</h2>
+    <p>장르: 퀴즈</p>
+    <button onclick="location.href='game3.html'">게임 소개</button>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>소개</title>
+
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+  text-align: center;
+}
+
+/* 🔵 네비게이션 바 */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 60px;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.menu a {
+  position: relative;
+  margin-left: 35px;
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.menu .active::after {
+  width: 100%;
+}
+
+/* 🔵 소개 카드 */
+.container {
+  max-width: 700px;
+  margin: 180px auto 100px auto;
+  background: white;
+  color: black;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+p {
+  line-height: 1.7;
+}
+
+/* 🔵 인스타 버튼 */
+.insta {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.insta:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🔵 상단 메뉴 -->
+<div class="navbar">
+  <div class="logo" onclick="location.href='index.html'">
+    MINJUN GAMES
+  </div>
+
+  <div class="menu">
+    <a href="index.html">홈</a>
+    <a href="about.html" class="active">소개</a>
+  </div>
+</div>
+
+<!-- 🔵 소개 카드 -->
+<div class="container">
+  <h1>👨‍💻 제작자 소개</h1>
+
+  <p>
+    안녕하세요. 저는 만두입니다.
+  </p>
+
+  <p>
+    AI를 활용해 게임과 웹페이지를 제작하며
+    친구들과 공유하고 경쟁하는 공간을 만들고 있습니다.
+  </p>
+
+  <p>
+    앞으로 더 재미있고 완성도 높은 게임을 계속 만들어갈 예정입니다 🚀
+  </p>
+
+  <a href="https://instagram.com/mandoo_mandoo_1225" target="_blank" class="insta">
+    📷 인스타그램 방문하기
+  </a>
+</div>
+
+</body>
+</html>
